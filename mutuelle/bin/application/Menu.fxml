@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <TabPane prefHeight="756.0" prefWidth="1105.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Signup">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <TextField fx:id="entreprise" layoutX="230.0" layoutY="112.0" prefHeight="37.0" prefWidth="201.0" style="-fx-background-radius: 20;" />
+                        <Text fill="WHITE" layoutX="230.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Entreprise :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="prenom" layoutX="230.0" layoutY="219.0" prefHeight="37.0" prefWidth="201.0" style="-fx-background-radius: 20;" />
+                        <Text fill="WHITE" layoutX="231.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="email" layoutX="230.0" layoutY="334.0" prefHeight="37.0" prefWidth="201.0" style="-fx-background-radius: 20;" />
+                        <Text fill="WHITE" layoutX="230.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="nom" layoutX="670.0" layoutY="219.0" prefHeight="37.0" prefWidth="201.0" style="-fx-background-radius: 20;" />
+                        <Text fill="WHITE" layoutX="669.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="telephone" layoutX="670.0" layoutY="334.0" prefHeight="37.0" prefWidth="201.0" style="-fx-background-radius: 20;" />
+                        <Text fill="WHITE" layoutX="669.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <RadioButton fx:id="cin" layoutX="231.0" layoutY="422.0" mnemonicParsing="false"  text="CIN" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="passport" layoutX="347.0" layoutY="422.0" mnemonicParsing="false"  text="Passport" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <TextField fx:id="cin_passport" layoutX="230.0" layoutY="462.0" prefHeight="37.0" prefWidth="201.0" style="-fx-background-radius: 20;" />
+                        <DatePicker fx:id="date" layoutX="670.0" layoutY="112.0" prefHeight="37.0" prefWidth="201.0" />
+                        <Text fill="WHITE" layoutX="670.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="670.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse :">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="887.0" layoutY="637.0" mnemonicParsing="false"  prefHeight="41.0" prefWidth="153.0" style="-fx-background-color: #3EFF00; -fx-background-radius: 20;" text="Enregistrer" />
+                        <TextArea fx:id="adresse" layoutX="671.0" layoutY="464.0" prefHeight="59.0" prefWidth="214.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="affichage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="-1.0" prefHeight="729.0" prefWidth="1105.0">
+                          <columns>
+                            <TableColumn fx:id="entreprise" prefWidth="116.0" text="Nom Entreprise" />
+                            <TableColumn fx:id="prenom" prefWidth="85.0" text="Prénom " />
+                              <TableColumn fx:id="nom" prefWidth="95.0" text="Nom " />
+                              <TableColumn fx:id="cin" prefWidth="148.0" text="Cin ou Passport" />
+                              <TableColumn fx:id="telephone" prefWidth="114.0" text="Téléphone" />
+                              <TableColumn fx:id="email" minWidth="0.0" prefWidth="149.0" text="Email" />
+                              <TableColumn fx:id="adresse" minWidth="0.0" prefWidth="180.0" text="Adresse" />
+                              <TableColumn fx:id="date" minWidth="0.0" prefWidth="217.0" text="Date début" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
